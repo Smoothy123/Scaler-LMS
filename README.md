@@ -1,4 +1,4 @@
-# PRO-SCALER 
+# Scaler-LMS
 
 
 A web-based e-learning platform that supports both **instructors** and **students**.
