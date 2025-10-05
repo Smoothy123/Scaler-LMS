@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Scaler</title>
+  <link rel="stylesheet" href="new.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fef9f4;
+      color: #333;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .faq-header h1 {
+      font-size: 2.5rem;
+      color: #0a1a40;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .faq-question {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      transition: 0.3s;
+      font-weight: 600;
+      color: #0a1a40;
+    }
+
+    .faq-question:hover {
+      background: #f8f8f8;
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      color: #007bff;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #fafafa;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer-content {
+      padding: 1.5rem;
+      color: #555;
+      line-height: 1.8;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Scaler</div>
+    <ul class="nav-links">
+      <li><a href="student.html">All Courses</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li><a href="faq.html">FAQ's</a></li>
+      
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- FAQ Container -->
+  <div class="faq-container">
+    <div class="faq-header">
+      <h1>Frequently Asked Questions</h1>
+      <p>Find answers to common questions about our Learning Management System</p>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Are all courses available online?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          Yes, all courses are available online. You can access them anytime after enrolling from any device with an internet connection.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Do I need prior experience to start?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          No prior experience is required. Each course starts with basics and moves to advanced topics step by step, making it suitable for beginners.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can I watch lectures multiple times?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          Yes, you can watch all lectures as many times as you like once enrolled. There are no restrictions on rewatching content to reinforce your learning.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Will I get a certificate after completion?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          Yes, upon successful completion of the course and passing all quizzes with a minimum score of 70%, a digital certificate will be provided that you can download and share.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How can I track my progress?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          Your progress is automatically saved as you complete videos, readings, and quizzes. You can check it anytime from the course progress page where completed items are marked with blue circles.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How do quizzes work?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          Quizzes contain multiple-choice questions to test your understanding. Select your answers and click submit to see your score immediately. A score of 70% or higher is considered passing.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can I access courses from mobile devices?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          Yes! Our platform is fully responsive and works on smartphones, tablets, laptops, and desktop computers. Your progress syncs across all devices.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What happens when I complete a week?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          When you complete all materials in a week (video, reading, and quiz), you'll receive a congratulations message and the week will be marked as complete with a blue circle in the sidebar.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How do I navigate between lectures?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          Use the Previous/Next buttons at the bottom of each lecture, or click directly on any lecture in the course outline sidebar to jump to it immediately.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How can I get help if I have issues?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          If you encounter any issues, check this FAQ page first. For additional support, contact our support team at support@scaler.com. We typically respond within 24 hours on business days.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // FAQ Accordion functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Highlight active nav link
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
+

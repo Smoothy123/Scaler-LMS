@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logout</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+    .logout-box {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .logout-box h2 {
+      margin-bottom: 15px;
+    }
+    .logout-box p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .logout-box button {
+      background: #007BFF;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .logout-box button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="logout-box">
+    <h2>Logout</h2>
+    <p>Click below to logout and return to login/signup page.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    function logout() {
+      // clear token and any user data
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      // redirect to login/signup
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
+

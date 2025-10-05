@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Progress</title>
+  <link rel="stylesheet" href="new.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { display: flex; margin: 0; font-family: Arial, sans-serif; }
+    .sidebar { width: 250px; background: #f4f4f4; padding: 20px; height: 100vh; overflow-y: auto; }
+    .sidebar h2 { font-size: 18px; margin-bottom: 10px; }
+    .week { cursor: pointer; margin: 10px 0; }
+    .lecture { margin-left: 15px; cursor: pointer; }
+    .lecture.done { color: blue; font-weight: bold; }
+    .content { flex: 1; padding: 20px; }
+    iframe { width: 100%; height: 400px; border: none; }
+    .nav-buttons { margin-top: 10px; display: flex; justify-content: space-between; }
+    button { padding: 8px 12px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <!-- Add navbar here too -->
+  <div style="width: 100%; position: fixed; top: 0; left: 0; z-index: 1000;">
+    <nav class="navbar">
+      <div class="logo">Scaler</div>
+      <ul class="nav-links">
+        <li><a href="student.html">All Courses</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="faq.html">FAQ's</a></li>
+        
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div style="display: flex; margin-top: 70px; width: 100%;">
+    <div class="sidebar">
+      <h2>Course Outline</h2>
+      <div id="lecturesList">Loading...</div>
+    </div>
+
+    <div class="content">
+      <h2 id="courseTitle">Course</h2>
+      <iframe id="lectureVideo" src="" allowfullscreen></iframe>
+      <p id="lectureContent"></p>
+      <button id="markDoneBtn">Mark as Done</button>
+      <div class="nav-buttons">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="progress.js"></script>
+  <script>
+    // Highlight active nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      if (link.getAttribute('href').includes('progress.html')) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

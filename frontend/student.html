@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="new.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="student-dashboard">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Scaler</div>
+    <ul class="nav-links">
+      <li><a href="student.html">All Courses</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li><a href="faq.html">FAQ's</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="main-container">
+
+    <!-- Centered Search -->
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search for courses... (e.g., Android, C++)">
+    </div>
+
+    <!-- Explore Courses -->
+    <div class="explore-section">
+      <h2>Explore Courses</h2>
+      <div id="allCourses" class="course-grid">
+        <!-- JS will dynamically insert course cards here -->
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // Highlight active nav link
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
+
+

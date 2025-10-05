@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup | LearnHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth">
+  <div class="overlay"></div>
+  <div class="auth-container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <div class="role-select">
+        <label><input type="radio" name="role" value="student" checked> Student</label>
+        <label><input type="radio" name="role" value="instructor"> Instructor</label>
+      </div>
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Enter username" required>
+
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter password" required>
+
+      <label>Confirm Password</label>
+      <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="switch">Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

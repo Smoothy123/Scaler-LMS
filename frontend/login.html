@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Scaler LMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth">
+  <div class="overlay"></div>
+
+  <div class="auth-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="role-select">
+        <label><input type="radio" name="role" value="student" checked> Student</label>
+        <label><input type="radio" name="role" value="instructor"> Instructor</label>
+      </div>
+
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Enter username" required>
+
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <p class="switch">Don’t have an account? <a href="signup.html">Sign up here</a></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

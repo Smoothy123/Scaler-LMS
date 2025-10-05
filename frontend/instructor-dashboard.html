@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Instructor Dashboard</title>
+  <link rel="stylesheet" href="instructor.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body class="instructor-page">
+
+  <nav class="topbar">
+    <div class="brand">Scaler — Instructor</div>
+    <div class="actions">
+      <span id="loggedUser" class="user-name"></span>
+      <a href="logout.html" class="btn small">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="header">
+      <h1>Instructor Dashboard</h1>
+      <p>Create & manage your courses and lectures (reading / quiz / video)</p>
+    </header>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-target="createCourse">Create Course</button>
+      <button class="tab-btn" data-target="myCourses">My Courses</button>
+      <button class="tab-btn" data-target="manageLectures">Manage Lectures</button>
+    </div>
+
+    <!-- Sections -->
+    <section id="createCourse" class="tab-panel show">
+      <h2>Create Course</h2>
+      <form id="createCourseForm" class="card form-card">
+        <label>Title</label>
+        <input type="text" id="courseTitle" required placeholder="Course title" />
+        <label>Description</label>
+        <textarea id="courseDesc" rows="4" placeholder="Course description"></textarea>
+        <label>Image URL (optional)</label>
+        <input type="text" id="courseImage" placeholder="https://..." />
+        <label>Youtube Intro (optional)</label>
+        <input type="text" id="courseYoutube" placeholder="https://youtube.com/..." />
+        <div class="form-actions">
+          <button type="submit" class="btn">Create Course</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="myCourses" class="tab-panel">
+      <h2>My Courses</h2>
+      <div id="coursesList" class="cards-grid">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <section id="manageLectures" class="tab-panel">
+      <h2>Manage Lectures</h2>
+      <div id="manageWrap" class="grid-two">
+        <!-- Left: course selector & lecture list -->
+        <div class="panel card">
+          <h3>Selected Course</h3>
+          <select id="selectCourse">
+            <option value="">-- select a course to manage --</option>
+          </select>
+
+          <div id="lecturesList" class="lectures-list">
+            <p class="muted">Choose a course to load lectures.</p>
+          </div>
+        </div>
+
+        <!-- Right: add lecture (reading / quiz / video) -->
+        <div class="panel card">
+          <h3>Add Lecture</h3>
+
+          <div class="lecture-type-tabs">
+            <button class="lt-btn active" data-type="reading">Reading</button>
+            <button class="lt-btn" data-type="video">Video</button>
+            <button class="lt-btn" data-type="quiz">Quiz</button>
+          </div>
+
+          <form id="addLectureForm" class="form-card">
+            <label>Week (number)</label>
+            <input type="number" id="lecWeek" min="1" required />
+
+            <label>Title</label>
+            <input type="text" id="lecTitle" required placeholder="Lecture title" />
+
+            <!-- reading content -->
+            <div id="readingFields" class="lec-fields">
+              <label>Reading content (text or link)</label>
+              <textarea id="lecContent" rows="4" placeholder="Text or link"></textarea>
+            </div>
+
+            <!-- video fields -->
+            <div id="videoFields" class="lec-fields hidden">
+              <label>YouTube URL</label>
+              <input type="text" id="lecYoutube" placeholder="https://youtu.be/..." />
+            </div>
+
+            <!-- quiz fields -->
+            <div id="quizFields" class="lec-fields hidden">
+              <label>Quiz questions</label>
+              <div id="quizQuestions"></div>
+              <div class="quiz-actions">
+                <button type="button" id="addQuestionBtn" class="btn small">+ Add question</button>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">Add Lecture</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="instructor.js"></script>
+</body>
+</html>
+
